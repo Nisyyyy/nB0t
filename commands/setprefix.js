@@ -1,4 +1,4 @@
-const gdata = require('../database/mongoose/GuildData')
+const gdata = require('../mongoose/GuildData')
 
 async function runCmd(bot, message, args) {
   const prefix = args.join(" ");
