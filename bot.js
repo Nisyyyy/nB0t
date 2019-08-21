@@ -2,7 +2,7 @@
 const time = Date(),
 pak = require('./package.json'),
 discord = require('discord.js'),
-config = require('./json/config.json'),
+config = require('json/config.json'),
 profanities = require("./profanities.json"),
 bot = new discord.Client()
 var prefix = "n",
