@@ -1,4 +1,4 @@
-const udata = require('../database/mongoose/UserData')
+const udata = require('../mongoose/UserData')
 
 module.exports.run = (bot, message, args) => {
   const randomcoins = Math.ceil(Math.random() * 250)
