@@ -16,7 +16,6 @@ snekfetch = require('snekfetch'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 config.updates = updates.join(' ')
 require('mongoose').connect(`mongodb+srv://nBot:${process.env.mongopassword}@nBot-2fias.gcp.mongodb.net/test?retryWrites=true`, { useNewUrlParser: true })
-const gdata = require('./database/mongoose/GuildData')
 // End of init
 
 // The bot's support server invite vvv
@@ -50,7 +49,7 @@ bot.on("ready", () => {
     .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
   
   setTimeout(() => {
-    bot.user.setActivity(`for !help | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
+    bot.user.setActivity(`for nhelp | ${bot.guilds.array().length} servers`, {type: "WATCHING"});
   }, 20000)
 
   bot.guilds.forEach((guild, id) => {
