@@ -15,7 +15,6 @@ module.exports.run = (bot, message, args, discord) => {
 	if (msg == categories[4].toLowerCase() || msg == categories[4]) {
 		em
 		.setTitle("✔ More help")
-		.setDescription("For more help, check out the [command docs](https://gist.github.com/FHGDev/67ed143f693a6424cc4ef7ce9ca3c796)!")
 		.addField("EVEN MORE HELP?", "Do you *still* need more help? Use the `!contact` command, and I'll get to you ASAP.")
 		
 		message.channel.send({embed: em})
@@ -66,7 +65,7 @@ module.exports.run = (bot, message, args, discord) => {
 		.setDescription(`**Use !help [category] for help on a certain category.**`)
 		.setTimestamp()
 		.addField("Categories", `**${categories.join("\n")}**`, true)
-		.addField("Links", "[Website](https://bot.nBot.tk/home) | [GitHub](https://github.com/FHGDev/nBot)\n[Invite](https://discordapp.com/api/oauth2/authorize?client_id=294194506113220608&permissions=8&redirect_uri=https%3A%2F%2Fbot.nBot.tk%2Fhome&response_type=code&scope=bot%20guilds) | [Discord](https://discord.gg/eRfgZec)", true)
+		.addField("Links", "[Website](http://nisyy.eu5.org) | [GitHub](https://github.com/Nisyyyy/nB0t)\n[Invite](https://discordapp.com/oauth2/authorize?client_id=585391769391202315&scope=bot&permissions=8) | [Discord](https://discord.gg/pcMjxs2)", true)
 		
   	message.channel.send({embed: em})
 	};
