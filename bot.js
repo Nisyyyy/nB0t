@@ -10,7 +10,6 @@ var prefix = "n",
 result = Math.round(Math.random()),
 ms = require('ms'),
 snekfetch = require('snekfetch'),
-cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 
 bot.invite = "https://discord.gg/gMzdms"
 // No more invite.
