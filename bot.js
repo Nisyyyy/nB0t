@@ -8,14 +8,11 @@ bot = new discord.Client()
 var prefix = "n",
 {baselogger} = require('./src/logger.js'),
 result = Math.round(Math.random()),
-updates = ["Work command added.", "MongoDB is now nBot's official database provider."],
-webhookchannelid = "441710517460008960",
 cleverbot = require('cleverbot.io'),
 ms = require('ms'),
 snekfetch = require('snekfetch'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
 config.updates = updates.join(' ')
-require('mongoose').connect(`mongodb+srv://nBot:${process.env.mongopassword}@nBot-2fias.gcp.mongodb.net/test?retryWrites=true`, { useNewUrlParser: true })
 // End of init
 
 // The bot's support server invite vvv
