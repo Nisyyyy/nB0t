@@ -28,13 +28,14 @@ module.exports = (bot, member) => {
    const channel = member.guild.channels.find(channel => channel.name == "welcome")
    if (!channel) return;
       if (!member.displayName) {
-         channel.send(`Welcome to ${member.guild.name}, ${member.user.username}!`);
+         channel.send(`Welcome to ${member.guild.name}, <@${member.id}>`);
          console.log(`${member.user.username} just joined ${member.guild.name}`);
       } else {
-         channel.send(`Welcome to ${member.guild.name}, ${member.displayName}!`); 
+         channel.send(`Welcome to ${member.guild.name}, <@${member.id}>`); 
          console.log(`${member.displayName} just joined ${member.guild.name}`);
       }
    }
+   
    
    if (member.guild.id == autoroleguilds.rl) {
       if (member.user.bot) {
