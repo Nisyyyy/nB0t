@@ -8,9 +8,11 @@ bot = new discord.Client()
 var prefix = "n",
 {baselogger} = require('./src/logger.js'),
 result = Math.round(Math.random()),
+updates = ["Work command added.", "MongoDB is now nBot's official database provider."],
+webhookchannelid = "441710517460008960",
 ms = require('ms'),
-snekfetch = require('snekfetch'),
-
+snekfetch = require('snekfetch')
+config.updates = updates.join(' ')
 bot.invite = "https://discord.gg/gMzdms"
 // No more invite.
 
