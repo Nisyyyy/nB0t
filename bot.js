@@ -8,14 +8,10 @@ bot = new discord.Client()
 var prefix = "n",
 {baselogger} = require('./src/logger.js'),
 result = Math.round(Math.random()),
-cleverbot = require('cleverbot.io'),
 ms = require('ms'),
 snekfetch = require('snekfetch'),
 cb = new cleverbot("sMNApmkOjMlZRlPZ", "gskxw3JBqEVGIAboBjOnvyTf8awM1MbS")
-config.updates = updates.join(' ')
-// End of init
 
-// The bot's support server invite vvv
 bot.invite = "https://discord.gg/gMzdms"
 // No more invite.
 
