@@ -10,7 +10,7 @@ if (message.author.id == "545003768350244875") {
     })
   }
   } else {
-    message.channel.send("Nope!")
+    message.channel.send("You dont have super permissions to do that!")
   }
 }
 

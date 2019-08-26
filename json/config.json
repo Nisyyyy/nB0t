@@ -1,6 +1,7 @@
 { 
   "prefix": "!",
   "version": "1.2.0",
+  "admins" : ["445234723590242304"],
   "banreason": "",
   "kickreason": "",
   "Developers": ["nissy"],

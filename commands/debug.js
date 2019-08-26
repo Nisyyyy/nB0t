@@ -25,7 +25,7 @@ module.exports.run = (bot, message, args, discord) => {
 ⌛ **Uptime:** ${Math.round(bot.uptime / (1000 * 60 * 60))} hours, ${Math.round(bot.uptime / (1000 * 60)) % 60}  minutes, ${Math.round(bot.uptime / 1000) % 60} seconds.\n\n`)
   message.channel.send({embed: embed})
 } else {
-  message.channel.send("Nope!")
+  message.channel.send("You dont have super permissions to do that!")
 } 
 }
 

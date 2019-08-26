@@ -18,7 +18,7 @@ module.exports.run = (bot, message, args) => {
     return message.channel.send(err, { code: 'js' })
   });  
   } else {
-    message.channel.send("Nope!")
+    message.channel.send("You dont have super permissions to do that!")
   }
   }
 

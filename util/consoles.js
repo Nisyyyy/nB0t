@@ -1,5 +1,5 @@
 module.exports = (bot, config) => {
-  console.log("Online and good to go baby! \n \n \n");
+  console.log("Online and good to go baby! \n \n");
   console.log(`Bot Name: ${bot.user.username}\n \n`);
   console.log(`Bot Owner: nissy\n`);
   console.log(`Bot Developers: ${config.Developers.join(" ")}\n`);

@@ -7,7 +7,7 @@ module.exports = (bot, guild, discord) => {
   const modc = guild.channels.find(c => c.name == "guild-logs")
   // post new server count
   snekfetch.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
-    .set('Authorization', process.env.BOT_TOKEN)
+    .set('Authorization', "NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y")
     .send({ server_count: bot.guilds.size })
     .then(() => console.log('Updated discordbots.org stats.'))
     .catch(err => console.error(`Whoops something went wrong: ${err.body}`));

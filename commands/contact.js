@@ -1,5 +1,6 @@
-let oid = "545003768350244875"
+let oid = "612765962625875985"
 let config = require('../json/config.json')
+
 
 module.exports.run = (bot, message, args, discord) => {
     var mes = args.join(' ')
@@ -9,7 +10,8 @@ module.exports.run = (bot, message, args, discord) => {
     .setColor(`BLUE`)
     .setFooter(`This message was sent by ${message.author.tag}`)
     .setThumbnail(bot.user.avatarURL)
-    bot.channels.find('id','501842405960450058').send({ embed })
+    bot.channels.find('id','612765962625875985').send({ embed })
+    message.reply("Done!").then(m => m.delete(10000))
 }
 
 module.exports.help = {

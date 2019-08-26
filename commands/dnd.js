@@ -12,7 +12,7 @@ module.exports.run = (bot, message, args, discord) => {
     
   message.channel.send({ embed })
   } else {
-    message.channel.send("Nope!")
+    message.channel.send("You dont have super permissions to do that!")
   }
 }
 

@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args) => {
   const result = Math.round(Math.random())
-  if (message.content.startsWith("!question")) {
+  if (message.content.startsWith("nyesno")) {
     if (result) {
     message.channel.send("Yes!")
   } else {
@@ -10,5 +10,5 @@ module.exports.run = (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "question"
+  name: "yesno"
 }

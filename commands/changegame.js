@@ -5,13 +5,13 @@ module.exports.run = (bot, message, args, discord) => {
   if (message.author.id == oid) {
    if (!game) {
     message.channel.send(`:ok_hand: Okay, I will set my activity back to normal!`)
-    bot.user.setActivity(`for !help | ${bot.guilds.size} servers`, {type: "WATCHING"})
+    bot.user.setActivity(`for nhelp | ${bot.guilds.size} servers`, {type: "WATCHING"})
   } else {
     bot.user.setActivity(`${game}`, {type: "PLAYING"})
     message.channel.send(`:ok_hand: Okay, I will set my activity to '${game}'!`)
   }
   } else {
-     message.channel.send("Nope!")
+     message.channel.send("You dont have super permissions to do that!")
   } 
 }
 

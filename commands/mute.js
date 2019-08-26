@@ -2,11 +2,12 @@ const ms = require("ms");
 const Discord = require('discord.js');
 
 module.exports.run = (bot, message, args) => {
+	
 	if (message.member.hasPermission("MANAGE_MESSAGES")) {
 		let member = message.mentions.members.first();
 		if(!member) {
 			var msgA = [];
-			msgA.push(`= **Muted Members** =\n`)
+			msgA.push(`Correct Usage : **nmute [user] [time] [reason]** \n = **Muted Members:** =\n`)
 
 			message.guild.members.forEach(async (m) => {
 				if(m.roles.find("name", "Muted")) {

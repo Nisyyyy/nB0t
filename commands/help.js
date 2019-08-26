@@ -1,10 +1,10 @@
 module.exports.run = (bot, message, args, discord) => {
- 	let categories = ["Bot", "Moderation", "Fun", "Music", "More help", "NSFW"]
-	let fun = ["coinflip", "chucknorris", "yomomma", "bork", "advice", "redeem", "knockknock", "meme", "avatar", "snek", "stats", "timer", "whois", "weather"]
-	let bota = ["uptime", "ping", "@nBot", "joinserver", "invite", "info", "stats", "listservers", "creators", "help"]
-	let mod = ["ban", "hackban", "unhackban", "softban", "kick", "mute", "unmute", "purge"]
+ 	let categories = ["Bot", "Moderation", "Fun", "More help", "NSFW", "Developer"]
+	let fun = ["coinflip", "yesno", "chucknorris", "yomomma", "bork", "advice", "knockknock", "avatar", "snek", "stats", "timer"]
+	let bota = ["uptime", "test", "leave", "perms", "say", "userinfo", "serverinfo", "ping", "@nBot", "invite", "info", "stats", "listservers", "creators", "help"]
+	let mod = ["ban", "softban", "kick", "mute", "unmute", "addrole", "removerole", "purge"]
 	let nsfw = ["pussy", "ass", "boobs", "dick", "fuck"]
-	let moosic = ["play", "clearqueue", "stop"]
+	let developer = ["baselog", "changegame", "debug", "dnd", "offline", "online", "idle", "setnick"]
 	let msg = args.join(" ")
 	let em = new discord.RichEmbed()
 	.setTitle("Help Menu")
@@ -12,10 +12,20 @@ module.exports.run = (bot, message, args, discord) => {
 	.setColor("RANDOM")
 	.setTimestamp()
 	
-	if (msg == categories[4].toLowerCase() || msg == categories[4]) {
+	if (msg == categories[3].toLowerCase() || msg == categories[3]) {
 		em
 		.setTitle("✔ More help")
 		.addField("EVEN MORE HELP?", "Do you *still* need more help? Use the `!contact` command, and I'll get to you ASAP.")
+		
+		message.channel.send({embed: em})
+	}
+
+		
+	if (msg == categories[5].toLowerCase() || msg == categories[5]) {
+		em
+		.setTitle("Developer")
+		.setDescription("Can be used only by the developer of the bot!")
+		.addField("Developer Commands", `**${developer.join("\n")}**`, true)
 		
 		message.channel.send({embed: em})
 	}
@@ -44,7 +54,7 @@ module.exports.run = (bot, message, args, discord) => {
 		
 		message.channel.send({embed: em})
 	}
-	if (msg == categories[5].toLowerCase() || msg == categories[5]) {
+	if (msg == categories[4].toLowerCase() || msg == categories[4]) {
 		em
 		.setTitle("🔞 NSFW")
 		.setDescription(`These commands are *not* for children!`)
@@ -52,17 +62,11 @@ module.exports.run = (bot, message, args, discord) => {
 		
 		message.channel.send({embed: em})
 	}
-	
-	if (msg == categories[4].toLowerCase() || msg == categories[4]) {
-		em
-		.setTitle("🎵 Music")
-		.setDescription("Get some tunes poppin in your voice channel!")
-		.addField(`Music Commands`, `**${moosic.join("\n")}**`, true)
-	}
+
 	
 	if (!msg) {
 		em
-		.setDescription(`**Use !help [category] for help on a certain category.**`)
+		.setDescription(`**Use nhelp [category] for help on a certain category.**`)
 		.setTimestamp()
 		.addField("Categories", `**${categories.join("\n")}**`, true)
 		.addField("Links", "[Website](http://nisyy.eu5.org) | [GitHub](https://github.com/Nisyyyy/nB0t)\n[Invite](https://discordapp.com/oauth2/authorize?client_id=585391769391202315&scope=bot&permissions=8) | [Discord](https://discord.gg/pcMjxs2)", true)

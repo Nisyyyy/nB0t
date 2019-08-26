@@ -1,6 +1,6 @@
 module.exports = (bot) => {
   const DBL = require('dblapi.js');
-  const dbl = new DBL(process.env.BOT_TOKEN, { webhookPort: 5000, webhookAuth: process.env.whpassword });
+  const dbl = new DBL("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y", { webhookPort: 5000, webhookAuth: process.env.whpassword });
   dbl.webhook.on('ready', hook => {
     console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
   });

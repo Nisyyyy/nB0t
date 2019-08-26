@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args, discord) => {
       process.exit(666);
     }, 500)
   } else {
-    message.channel.send("Nope!")
+    message.channel.send("You dont have super permissions to do that!")
   }
 }
 

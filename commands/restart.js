@@ -15,7 +15,7 @@ let embed = new discord.RichEmbed()
     channel.send({embed: em})
     .then(m => m.delete(5000))
     .then(() => bot.destroy())
-    .then(() => bot.login(process.env.BOT_TOKEN))
+    .then(() => bot.login("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y"))
     .catch(err => console.error(err))
     .then(() => message.channel.send({embed: embed}))
   }

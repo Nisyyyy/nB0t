@@ -12,8 +12,7 @@ module.exports.run = (bot, message, args, discord) => {
   Memory Usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
   Discord.js Version 11.3.1
   Node Version 8.9.4
-  Source Code: [GitHub](https://github.com/FHGDev/JSnBot)
-  nBot Website: [Website](https://bot.nBot.ml/home)`)
+  Source Code: [GitHub](https://github.com/Nisyyyy/nb0t)`)
   .setFooter(`nBot Status`)
   .setTimestamp()  
   message.channel.send({embed: embed})

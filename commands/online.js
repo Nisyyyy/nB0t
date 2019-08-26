@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
     .setFooter(`This command was used at ${new Date()}`)
   message.channel.send({ embed })
  } else {
-      message.channel.send("Nope!") 
+      message.channel.send("You dont have super permissions to do that!") 
   }
 }
 

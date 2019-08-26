@@ -5,18 +5,17 @@ discord = require('discord.js'),
 config = require('./json/config.json'),
 profanities = require("./profanities.json"),
 bot = new discord.Client()
-var prefix = "n",
+var prefix = "!",
 {baselogger} = require('./src/logger.js'),
 result = Math.round(Math.random()),
 updates = ["Work command added.", "MongoDB is now nBot's official database provider."],
 webhookchannelid = "441710517460008960",
 ms = require('ms'),
+fs = require('ms'),
 snekfetch = require('snekfetch')
 config.updates = updates.join(' ')
 bot.invite = "https://discord.gg/gMzdms"
-// No more invite.
 
-// Gather commands
 bot.commands = new discord.Collection();
 
 process.on('unhandledRejection', (reason, promise) => {
@@ -37,7 +36,7 @@ bot.on("ready", () => {
   bot.user.setActivity("Loading nBot...", {type: "STREAMING", url: "https://twitch.tv/freakingNissy"})
   // Post bot stats
   snekfetch.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
-    .set('Authorization', process.env.BOT_TOKEN)
+    .set('Authorization', "NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y")
     .send({ server_count: bot.guilds.size })
     .then(() => console.log('Updated discordbots.org stats.'))
     .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
@@ -53,7 +52,7 @@ bot.on("ready", () => {
 bot.on('error', (err) => {
   console.error(`Error... ${err}`).then(() => {
     bot.destroy().then(() => {
-      bot.login(process.env.BOT_TOKEN)
+      bot.login("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y")
     })
   })
 })
@@ -68,6 +67,7 @@ bot.on("message", message => {
   if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
   if (message.channel.type == "dm") return;
+
 
   let mArray = message.content.split(" ");
   let args = mArray.slice(1);
@@ -86,7 +86,7 @@ bot.on("message", message => {
     message.channel.send("oh god, not another one");
   }
   
-  if (message.isMentioned("294194506113220608")) {
+  if (message.isMentioned("591733279443648522")) {
     const em = new discord.RichEmbed()
     .setTitle(`nBot Intro`)
     .setDescription(`Hey! Welcome to my intro! For help, use !help! For info about me, use !info!`)
@@ -107,7 +107,7 @@ bot.on("guildDelete", (guild) => {
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.username}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
-bot.login(process.env.BOT_TOKEN); 
+bot.login("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y"); 
 
 let upmsg = `Oh yeah, more updates! New updates:\n${updates}`
   async function senddat(up,msg) {
