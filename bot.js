@@ -36,7 +36,7 @@ bot.on("ready", () => {
   bot.user.setActivity("Loading nBot...", {type: "STREAMING", url: "https://twitch.tv/freakingNissy"})
   // Post bot stats
   snekfetch.post(`https://discordbots.org/api/bots/${bot.user.id}/stats`)
-    .set('Authorization', "NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y")
+    .set('Authorization', process.env.BOT_TOKEN)
     .send({ server_count: bot.guilds.size })
     .then(() => console.log('Updated discordbots.org stats.'))
     .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
@@ -52,7 +52,7 @@ bot.on("ready", () => {
 bot.on('error', (err) => {
   console.error(`Error... ${err}`).then(() => {
     bot.destroy().then(() => {
-      bot.login("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y")
+      bot.login(process.env.BOT_TOKEN)
     })
   })
 })
@@ -107,7 +107,7 @@ bot.on("guildDelete", (guild) => {
   baselogger(bot, `**Guild Leave**\n\n**Guild:** ${guild.name}\n**Owner:** ${guild.owner.user.username}\n**Large:** ${guild.large}\n**Member Count:** ${guild.memberCount}\n\n**Total Guilds:** ${bot.guilds.array().length}`, guild.iconURL);
 });
 
-bot.login("NTkxNzMzMjc5NDQzNjQ4NTIy.XWMAEA.iQVDdFNAcNnhQb-5DX3zLMc-O1Y"); 
+bot.login(process.env.BOT_TOKEN); 
 
 let upmsg = `Oh yeah, more updates! New updates:\n${updates}`
   async function senddat(up,msg) {
