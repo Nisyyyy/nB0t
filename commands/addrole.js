@@ -1,7 +1,7 @@
 module.exports.run = (bot, message, args, discord) => {
   let role = message.mentions.roles.first();
   if (!role) return message.channel.send(`You need to mention a role.`);
-        if(!message.member.hasPermission("MANAGE_MESSAGES") && message.author.id !== "545003768350244875") return message.channel.send("Sorry you don't have permission to use this!");
+        if(!message.member.hasPermission("ADMINISTRATOR") && message.author.id !== "545003768350244875") return message.channel.send("Sorry you don't have permission to use this!");
   let member = message.mentions.members.first();
   if (!member) return message.channel.send("You need to mention someone.");
   let roleid = role.id;
