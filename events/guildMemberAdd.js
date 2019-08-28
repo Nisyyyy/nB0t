@@ -24,7 +24,6 @@ module.exports = (bot, member) => {
    if (guildids.includes(member.guild.id)) {
       return;
    } else {
-   // SOON: member.send(`Welcome to ${member.guild.name}, ${member.displayName}!`);
    const channel = member.guild.channels.find(channel => channel.name == "welcome")
    if (!channel) return;
       if (!member.displayName) {
@@ -36,6 +35,25 @@ module.exports = (bot, member) => {
       }
    }
    
+   if(donowelcome.includes(member.guild.id)) {
+      return;
+   } else {     
+   if (guildids.includes(member.guild.id)) {
+      return;
+   } else {
+   const channel1 = member.guild.channels.find(channel => channel.name == "unverified")
+   if (!channel) return;
+      if (!member.displayName) {
+let welcomeembed = new Discord.RichEmbed()
+.setDescription(`Welcome to **${member.guild.name}**, <@${member.id}>`)
+.setColor("RANDOM")
+         channel1.send(welcomeembed);
+         console.log(`${member.user.username} just joined ${member.guild.name}`);
+      } else {
+         channel.send(`Welcome to **${member.guild.name}**, <@${member.id}>`); 
+         console.log(`${member.displayName} just joined ${member.guild.name}`);
+      }
+   }
    
    if (member.guild.id == autoroleguilds.rl) {
       if (member.user.bot) {
